@@ -1,1 +1,4 @@
-# No external dependencies required for serving static files.
+flask
+gunicorn
+gspread
+google-auth
