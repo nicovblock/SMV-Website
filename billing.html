@@ -48,11 +48,34 @@
         <p class="section-kicker">4.0 • BILLING</p>
         <h1 class="section-title">Membership Enrollment</h1>
         <p class="mt-4 text-xl text-ivory/85 max-w-3xl">
-          Complete secure checkout to finalize your private membership. Upon successful purchase, proceed to the hidden access page for onboarding channels.
+          Complete secure checkout to finalize your private membership. The flow below is intentionally simple: choose your tier, complete Stripe checkout, then enter the members area.
         </p>
+        <a href="#pricing-table" class="cta-btn inline-flex mt-6">Start Secure Checkout</a>
       </section>
 
-      <section class="panel p-4 sm:p-6 lg:p-8 mt-8 reveal" aria-label="Stripe pricing table">
+      <section class="mt-8 grid gap-4 md:grid-cols-3 reveal" aria-label="Enrollment steps">
+        <article class="panel p-5 billing-step">
+          <p class="billing-step-number">01</p>
+          <h2>Choose Plan</h2>
+          <p>Review membership options in the pricing table and choose the tier aligned to your operating level.</p>
+        </article>
+        <article class="panel p-5 billing-step">
+          <p class="billing-step-number">02</p>
+          <h2>Pay via Stripe</h2>
+          <p>Checkout is processed through Stripe with encrypted payment handling and a standard confirmation receipt.</p>
+        </article>
+        <article class="panel p-5 billing-step">
+          <p class="billing-step-number">03</p>
+          <h2>Enter Network</h2>
+          <p>After checkout completes, use the access page to join communication channels and begin verification.</p>
+        </article>
+      </section>
+
+      <section id="pricing-table" class="panel p-4 sm:p-6 lg:p-8 mt-8 reveal" aria-label="Stripe pricing table">
+        <div class="billing-panel-head">
+          <h2 class="font-display text-2xl text-imperial">Secure Pricing Table</h2>
+          <p class="text-ivory/75 text-lg">All transactions are hosted by Stripe. You can safely complete payment without leaving this flow.</p>
+        </div>
         <stripe-pricing-table
           pricing-table-id="prctbl_1SyFfxK3ZiLQQaefGPDVByVs"
           publishable-key="pk_live_51SxwLCK3ZiLQQaefHIPNinv5W0y06la9pzJ124eithftusrpMesCcuKgdjgzcQWgN9ZRmXxp2mdColM8OBWIipuj00UNBwh1pC"
@@ -60,12 +83,17 @@
         </stripe-pricing-table>
       </section>
 
-      <section class="mt-8 panel p-6 reveal">
-        <h2 class="font-display text-2xl text-imperial">Next Step After Payment</h2>
-        <p class="text-lg mt-3 text-ivory/85">
-          Once your purchase is complete, open the access page to join the Vanguard communication channels and verify your membership identity.
-        </p>
-        <a href="success.html" class="cta-btn inline-flex mt-6">Go to Access Page</a>
+      <section class="mt-8 panel p-6 reveal" aria-labelledby="post-purchase-title">
+        <h2 id="post-purchase-title" class="font-display text-2xl text-imperial">Post-Purchase Checklist</h2>
+        <ul class="mt-4 space-y-2 text-lg text-ivory/85 list-disc list-inside">
+          <li>Keep your Stripe receipt available for verification.</li>
+          <li>Open the private access page and join your preferred communication channel.</li>
+          <li>Introduce yourself with full name, business category, and service region.</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="success.html" class="cta-btn inline-flex">Continue to Access Page</a>
+          <a href="index.html#contact" class="outline-btn">Need help? Contact admissions</a>
+        </div>
       </section>
     </main>
 

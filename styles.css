@@ -199,3 +199,35 @@ body {
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
+
+.billing-step {
+  position: relative;
+  min-height: 13rem;
+}
+
+.billing-step-number {
+  font-family: 'Cinzel', serif;
+  color: rgba(232, 201, 109, 0.95);
+  letter-spacing: 0.22em;
+  font-size: 0.85rem;
+}
+
+.billing-step h2 {
+  margin-top: 0.35rem;
+  font-family: 'Cinzel', serif;
+  color: #e8c96d;
+  font-size: 1.3rem;
+}
+
+.billing-step p {
+  margin-top: 0.55rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(240, 237, 228, 0.84);
+}
+
+.billing-panel-head {
+  margin-bottom: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
+}
