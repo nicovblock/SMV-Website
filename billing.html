@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Secure billing and membership enrollment for St. Michael's Vanguard private network." />
+    <meta property="og:title" content="Billing | St. Michael's Vanguard" />
+    <meta property="og:description" content="Select your membership tier and complete secure Stripe checkout." />
+    <meta property="og:type" content="website" />
+    <title>Billing | St. Michael's Vanguard</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { obsidian: '#080A09', iron: '#1A1D19', imperial: '#C9A84C', bright: '#E8C96D', ivory: '#F0EDE4' },
+            fontFamily: { display: ['Cinzel', 'serif'], body: ['Cormorant Garamond', 'serif'] }
+          }
+        }
+      };
+    </script>
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-obsidian text-ivory font-body antialiased">
+    <header class="sticky top-0 z-50 bg-obsidian/95 backdrop-blur border-b border-imperial/20">
+      <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" aria-label="Primary">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="St. Michael's Vanguard home">
+          <img src="assets/logo.svg" alt="St. Michael's Vanguard emblem" class="brand-logo" width="36" height="36" decoding="async" />
+          <span class="font-display tracking-[0.2em] text-bright text-sm group-hover:text-imperial transition">ST. MICHAEL'S VANGUARD</span>
+        </a>
+        <div class="flex items-center gap-4 text-sm uppercase tracking-[0.16em]">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="success.html" class="nav-link">Network Access</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <section class="reveal">
+        <p class="section-kicker">4.0 • BILLING</p>
+        <h1 class="section-title">Membership Enrollment</h1>
+        <p class="mt-4 text-xl text-ivory/85 max-w-3xl">
+          Complete secure checkout to finalize your private membership. The flow below is intentionally simple: choose your tier, complete Stripe checkout, then claim your Signal group invite.
+        </p>
+        <a href="#pricing-table" class="cta-btn inline-flex mt-6">Start Secure Checkout</a>
+      </section>
+
+      <section class="mt-8 grid gap-4 md:grid-cols-3 reveal" aria-label="Enrollment steps">
+        <article class="panel p-5 billing-step">
+          <p class="billing-step-number">01</p>
+          <h2>Choose Plan</h2>
+          <p>Review membership options in the pricing table and choose the tier aligned to your operating level.</p>
+        </article>
+        <article class="panel p-5 billing-step">
+          <p class="billing-step-number">02</p>
+          <h2>Pay via Stripe</h2>
+          <p>Checkout is processed through Stripe with encrypted payment handling and a standard confirmation receipt.</p>
+        </article>
+        <article class="panel p-5 billing-step">
+          <p class="billing-step-number">03</p>
+          <h2>Enter Network</h2>
+          <p>After checkout completes, open the access page to claim the private Signal group invite link.</p>
+        </article>
+      </section>
+
+      <section id="pricing-table" class="panel p-4 sm:p-6 lg:p-8 mt-8 reveal" aria-label="Stripe pricing table">
+        <div class="billing-panel-head">
+          <h2 class="font-display text-2xl text-imperial">Secure Pricing Table</h2>
+          <p class="text-ivory/75 text-lg">All transactions are hosted by Stripe. You can safely complete payment without leaving this flow.</p>
+        </div>
+        <stripe-pricing-table
+          pricing-table-id="prctbl_1SyFfxK3ZiLQQaefGPDVByVs"
+          publishable-key="pk_live_51SxwLCK3ZiLQQaefHIPNinv5W0y06la9pzJ124eithftusrpMesCcuKgdjgzcQWgN9ZRmXxp2mdColM8OBWIipuj00UNBwh1pC"
+        >
+        </stripe-pricing-table>
+      </section>
+
+      <section class="mt-8 panel p-6 reveal" aria-labelledby="post-purchase-title">
+        <h2 id="post-purchase-title" class="font-display text-2xl text-imperial">Post-Purchase Checklist</h2>
+        <ul class="mt-4 space-y-2 text-lg text-ivory/85 list-disc list-inside">
+          <li>Keep your Stripe receipt available for verification.</li>
+          <li>Open the private access page and join the Signal group using the invite link.</li>
+          <li>Introduce yourself with full name, business category, and service region.</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="success.html" class="cta-btn inline-flex">Continue to Access Page</a>
+          <a href="index.html#contact" class="outline-btn">Need help? Contact admissions</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-imperial/20 py-6 text-center text-ivory/65 text-sm">
+      © <span id="year"></span> St. Michael's Vanguard.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
