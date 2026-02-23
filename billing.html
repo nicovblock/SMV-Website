@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Secure billing and membership enrollment for St. Michael's Vanguard private network." />
+    <meta property="og:title" content="Billing | St. Michael's Vanguard" />
+    <meta property="og:description" content="Select your membership tier and complete secure Stripe checkout." />
+    <meta property="og:type" content="website" />
+    <title>Billing | St. Michael's Vanguard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { obsidian: '#080A09', iron: '#1A1D19', imperial: '#C9A84C', bright: '#E8C96D', ivory: '#F0EDE4' },
+            fontFamily: { display: ['Cinzel', 'serif'], body: ['Cormorant Garamond', 'serif'] }
+          }
+        }
+      };
+    </script>
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-obsidian text-ivory font-body antialiased">
+    <header class="sticky top-0 z-50 bg-obsidian/95 backdrop-blur border-b border-imperial/20">
+      <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" aria-label="Primary">
+        <a href="index.html" class="font-display tracking-[0.2em] text-bright text-sm">ST. MICHAEL'S VANGUARD</a>
+        <div class="flex items-center gap-4 text-sm uppercase tracking-[0.16em]">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="success.html" class="nav-link">Network Access</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <section class="reveal">
+        <p class="section-kicker">4.0 • BILLING</p>
+        <h1 class="section-title">Membership Enrollment</h1>
+        <p class="mt-4 text-xl text-ivory/85 max-w-3xl">
+          Complete secure checkout to finalize your private membership. Upon successful purchase, proceed to the hidden access page for onboarding channels.
+        </p>
+      </section>
+
+      <section class="panel p-4 sm:p-6 lg:p-8 mt-8 reveal" aria-label="Stripe pricing table">
+        <stripe-pricing-table
+          pricing-table-id="prctbl_1SyFfxK3ZiLQQaefGPDVByVs"
+          publishable-key="pk_live_51SxwLCK3ZiLQQaefHIPNinv5W0y06la9pzJ124eithftusrpMesCcuKgdjgzcQWgN9ZRmXxp2mdColM8OBWIipuj00UNBwh1pC"
+        >
+        </stripe-pricing-table>
+      </section>
+
+      <section class="mt-8 panel p-6 reveal">
+        <h2 class="font-display text-2xl text-imperial">Next Step After Payment</h2>
+        <p class="text-lg mt-3 text-ivory/85">
+          Once your purchase is complete, open the access page to join the Vanguard communication channels and verify your membership identity.
+        </p>
+        <a href="success.html" class="cta-btn inline-flex mt-6">Go to Access Page</a>
+      </section>
+    </main>
+
+    <footer class="border-t border-imperial/20 py-6 text-center text-ivory/65 text-sm">
+      © <span id="year"></span> St. Michael's Vanguard.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
