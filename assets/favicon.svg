@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">St. Michael's Vanguard emblem</title>
+  <desc id="logoDesc">A stylized gold line icon of Saint Michael with sword, wings, and scales.</desc>
+  <g stroke="#E8C96D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="98" r="44"/>
+    <path d="M224 145L190 202M288 145L322 202"/>
+    <path d="M188 200L156 360M324 200L356 360"/>
+    <path d="M196 250L170 378M316 250L342 378"/>
+    <path d="M176 375H214M298 375H336"/>
+    <path d="M172 226C124 202 94 161 90 113C130 121 166 150 188 200"/>
+    <path d="M336 226C384 202 414 161 418 113C378 121 342 150 320 200"/>
+    <path d="M152 304C108 278 80 236 76 190C120 198 152 232 170 270"/>
+    <path d="M360 304C404 278 432 236 436 190C392 198 360 232 342 270"/>
+    <path d="M218 208L256 356L294 208"/>
+    <path d="M256 356V450"/>
+    <path d="M226 450H286"/>
+    <path d="M174 451C180 436 195 428 213 428H299C317 428 332 436 338 451"/>
+    <path d="M188 203L138 74"/>
+    <path d="M138 74L154 42L172 70L138 74Z"/>
+    <path d="M133 88L122 60"/>
+    <path d="M322 224H386"/>
+    <path d="M354 224V280"/>
+    <path d="M332 280H376"/>
+    <path d="M332 280L314 314H394L376 280"/>
+    <path d="M376 280L394 314"/>
+    <path d="M332 280L314 314"/>
+    <path d="M344 98C344 98 322 86 308 92"/>
+    <path d="M168 98C168 98 190 86 204 92"/>
+  </g>
+</svg>
